@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.LinkedList;
+
 public class Main {
     public static void main(String[] args) {
         Animal cow = new Animal("Cow");
@@ -14,6 +16,10 @@ public class Main {
         animalList.add(dog);
         animalList.add(pig);
         animalList.add(sheep);
+        LinkedList<Animal> linkedList = new LinkedList<>();
+        linkedList.add(cow);
+        linkedList.add(cat);
+        linkedList.remove(cat);
 
         System.out.println(animalList);
     }

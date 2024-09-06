@@ -11,6 +11,17 @@ public class AnimalList {
         }
     }
 
+    public void remove(Animal animal) {
+        if (this.head == null) {
+            return;
+        }
+
+        AnimalListItem virtualAnimal = new AnimalListItem(new Animal(""));
+        virtualAnimal.setNextAnimalListItem(this.head);
+        virtualAnimal.remove(animal);
+        this.head = virtualAnimal.getNextAnimalListItem();
+    }
+
     @Override
     public String toString() {
         if (this.head != null) {
