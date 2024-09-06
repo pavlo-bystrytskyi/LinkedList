@@ -133,4 +133,37 @@ class AnimalListTest {
                 actual
         );
     }
+
+    @org.junit.jupiter.api.Test
+    void removeTest_removeAll() {
+        Animal cow = new Animal("Cow");
+        Animal cat = new Animal("Cat");
+        Animal dog = new Animal("Dog");
+        Animal pig = new Animal("Pig");
+        Animal firstSheep = new Animal("Sheep");
+        Animal secondSheep = new Animal("Sheep");
+        AnimalList animalList = new AnimalList();
+
+        animalList.add(cow);
+        animalList.add(cat);
+        animalList.add(pig);
+        animalList.add(firstSheep);
+        animalList.add(secondSheep);
+        animalList.add(pig);
+        animalList.add(dog);
+
+        animalList.remove(firstSheep);
+        animalList.remove(pig);
+        animalList.remove(cow);
+        animalList.remove(cat);
+        animalList.remove(dog);
+
+        String expected =  "";
+        String actual = animalList.toString();
+
+        Assertions.assertEquals(
+                expected,
+                actual
+        );
+    }
 }
