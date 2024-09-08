@@ -2,8 +2,6 @@ package org.example;
 
 import org.junit.jupiter.api.Assertions;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class AnimalListTest {
 
     @org.junit.jupiter.api.Test
@@ -43,6 +41,22 @@ class AnimalListTest {
         Assertions.assertEquals(
               expected,
               actual
+        );
+    }
+
+    @org.junit.jupiter.api.Test
+    void removeTest_removeFromEmpty() {
+        Animal cow = new Animal("Cow");
+        AnimalList animalList = new AnimalList();
+
+        animalList.remove(cow);
+
+        String expected = "";
+        String actual = animalList.toString();
+
+        Assertions.assertEquals(
+                expected,
+                actual
         );
     }
 

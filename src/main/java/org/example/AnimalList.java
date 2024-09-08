@@ -31,7 +31,7 @@ public class AnimalList {
         return "";
     }
 
-    private class AnimalListItem {
+    private static class AnimalListItem {
         private final Animal animal;
         private AnimalListItem nextAnimalListItem = null;
 
